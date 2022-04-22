@@ -1,0 +1,6 @@
+getGenre:
+  handler: services/genres/handler.getGenre
+  events:
+    - http:
+        path: genre
+        method: get

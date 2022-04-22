@@ -1,0 +1,6 @@
+getStakeholder:
+  handler: services/stakeholders/handler.getStakeholder
+  events:
+    - http:
+        path: stakeholder
+        method: get

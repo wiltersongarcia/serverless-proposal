@@ -1,0 +1,6 @@
+getTrack:
+  handler: services/tracks/handler.getTrack
+  events:
+    - http:
+        path: track
+        method: get

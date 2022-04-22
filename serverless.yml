@@ -1,0 +1,22 @@
+app: media-api
+service: media-api
+
+frameworkVersion: '3'
+
+configValidationMode: error
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-dynamodb-local
+
+functions:
+  - ${file(./services/artists/serverless.yml)}
+  - ${file(./services/genres/serverless.yml)}
+  - ${file(./services/releases/serverless.yml)}
+  - ${file(./services/stakeholders/serverless.yml)}
+  - ${file(./services/tracks/serverless.yml)}

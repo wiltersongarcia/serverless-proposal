@@ -1,0 +1,6 @@
+getRelease:
+  handler: services/releases/handler.getRelease
+  events:
+    - http:
+        path: release
+        method: get

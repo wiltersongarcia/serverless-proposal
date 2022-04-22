@@ -1,0 +1,12 @@
+getArtist:
+  handler: services/artists/handler.getArtist
+  events:
+    - http:
+        path: artist
+        method: get
+createArtist:
+  handler: services/artists/handler.createArtist
+  events:
+    - http:
+        path: artist
+        method: post
